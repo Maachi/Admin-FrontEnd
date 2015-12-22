@@ -1,0 +1,18 @@
+{
+  "name": "Gestion",
+  "homepage": "https://github.com/Maachi/Admin-FrontEnd",
+  "authors": [
+    "Sebastian Romero <bipsa81@gmail.com>"
+  ],
+  "description": "Admin Front end",
+  "main": "",
+  "moduleType": [],
+  "license": "Apache v2",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
