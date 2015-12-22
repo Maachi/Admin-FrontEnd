@@ -9,3 +9,39 @@ body {
 	line-height: 1.5em;
 	-webkit-font-smoothing: antialiased;
 }
+
+form {
+	margin: 0;
+	padding: 0;
+
+	fieldset {
+		border: none;
+		margin: 0;
+		padding: 0;
+	}
+
+	input[type="text"],
+	input[type="email"],
+	input[type="password"],
+	textarea {
+		font-family: @main-font-family;
+		display: block;
+		width: 100%;
+		margin: 0;
+		padding: .5em 0 .5em .5em;
+		font-size: 1em;
+		box-sizing : border-box;
+
+		&:focus{
+			outline: none;
+		}
+	}
+
+
+	button {
+		font-family: @main-font-family;
+		width: 100%;
+		font-size: 1em;
+		padding: .5em;
+	}
+}
