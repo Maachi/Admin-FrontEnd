@@ -1,0 +1,52 @@
+.submit{
+	background-color: @submit-button-color;
+	color: @submit-text-color;
+}
+
+.box-message{
+	font-size: .9em;
+	line-height: 1.3em;
+	text-align: center;
+}
+
+
+.center{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+
+	&.login{
+		width: 20em;
+		margin: -8em 0 0 -10em;
+	}
+}
+
+.box {
+	background: @box-background-color;
+	border-radius: .8em;
+	position:relative;
+	overflow: hidden;
+
+
+	form{
+		input[type="text"]{
+			border-bottom: 1px solid @border-color;
+		}
+
+		input[type="text"],
+		input[type="email"],
+		input[type="password"]{
+			color: @p-text-color;
+		}
+
+		input[type="text"],
+		input[type="email"],
+		input[type="password"],
+		button {
+			padding: 1em;
+			font-size: 1.2em;
+		}
+
+	}
+
+}

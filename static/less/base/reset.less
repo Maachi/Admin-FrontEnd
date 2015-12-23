@@ -6,6 +6,9 @@ body {
 body {
 	margin: 0;
 	font-family: @main-font-family;
+	font-size: 100%;
+	background: @main-background-color;
+	color: @main-font-color;
 	line-height: 1.5em;
 	-webkit-font-smoothing: antialiased;
 }
@@ -28,12 +31,17 @@ form {
 		display: block;
 		width: 100%;
 		margin: 0;
-		padding: .5em 0 .5em .5em;
+		padding: .8em 0 .8em .8em;
 		font-size: 1em;
 		box-sizing : border-box;
+		border: none;
 
 		&:focus{
 			outline: none;
+		}
+
+		&:-webkit-autofill {
+			-webkit-box-shadow: 0 0 0px 1000px white inset;
 		}
 	}
 
@@ -43,5 +51,10 @@ form {
 		width: 100%;
 		font-size: 1em;
 		padding: .5em;
+		border: none;
+
+		&:focus{
+			outline: none;
+		}
 	}
 }

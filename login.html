@@ -10,15 +10,18 @@
 		<script>try{Typekit.load({ async: true });}catch(e){}</script>
 		<link rel="stylesheet" href="static/css/main.css">
 	</head>
-    <body class="login">
-    	<div class="floating-box center login">
-    		<form>
-    			<fieldset>
-    				<input type="text" name="user" placeholder="Username"/>
-    				<input type="password" name="password" placeholder="Password" />
-    				<button>Access</button>
-    			</fieldset>
-    		</form>
+	<body class="login">
+		<div class="center login">
+			<div class="box">
+				<form method="post">
+					<fieldset>
+						<input type="text" name="user" placeholder="Username or email"/>
+						<input type="password" name="password" placeholder="Password" />
+						<button class="submit">Access</button>
+					</fieldset>
+				</form>
+			</div>
+			<p class="box-message">Please follow guidelines to start using Gestion theme. You can add messages for users below the boxes</p>
     	</div>
 		<script src="static/javascript/main.js"></script>
 		<script>
