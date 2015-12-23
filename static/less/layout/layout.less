@@ -1,3 +1,69 @@
+.application-wrapper{
+	width: 60em;
+	min-width: 20em;
+	margin: 0 auto;
+}
+
+header{
+	&.application-header{
+		background: @main-header-color;
+		height: 4em;
+		flex-flow: row wrap;
+		justify-content: flex-start;
+		display: flex;
+
+		a, label, input[type="text"]{
+			color: white;
+		}
+
+		input[type="text"]{
+			line-height: 4em;
+			font-size: .95em;
+			background: transparent;
+			border: none;
+
+			&:focus{
+				outline: none;
+			}
+		}
+
+		h1{
+			width: 15%;
+			float: left;
+		}
+
+		h1, 
+		.actions{
+			display: flex;
+			font-size: 1em;
+			line-height: 4em;
+		}
+
+		.actions{
+			width: 80%;
+			flex-flow: row wrap;
+			justify-content: flex-start;
+			display: flex;
+
+			.search {
+				width: 50%;
+				flex-flow: row wrap;
+				justify-content: flex-start;
+				display: flex;
+
+				label{
+					width: 15%;
+				}
+
+				input[type="text"]{
+					width: 75%;
+				}
+			}
+		}
+	}
+}
+
+
 .submit{
 	background-color: @submit-button-color;
 	color: @submit-text-color;
@@ -29,8 +95,11 @@
 
 
 	form{
-		input[type="text"]{
-			border-bottom: 1px solid @border-color;
+		input{
+			&:first-child {
+				border-top: none;
+			}
+			border-top: 1px solid @border-color;
 		}
 
 		input[type="text"],
