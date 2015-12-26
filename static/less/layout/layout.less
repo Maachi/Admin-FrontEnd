@@ -8,9 +8,6 @@ header{
 	&.application-header{
 		background: @main-header-color;
 		height: 4em;
-		flex-flow: row wrap;
-		justify-content: flex-start;
-		display: flex;
 
 		a, label, input[type="text"]{
 			color: white;
@@ -27,12 +24,30 @@ header{
 			}
 		}
 
-		h1{
-			width: 15%;
-			float: left;
+		.application-wrapper{
+			flex-flow: row wrap;
+			justify-content: flex-start;
+			display: flex;
 		}
 
-		h1, 
+		h1{
+			width: 15%;
+			order: 0;
+			flex: 0 1 auto;
+			align-self: stretch;
+			line-height: 1.9em;
+			font-weight: 300;
+			text-align: left;
+
+			a{
+				padding: 0;
+
+				&:hover {
+					background: transparent;
+				}
+			}
+		}
+
 		.actions{
 			display: flex;
 			font-size: 1em;
@@ -40,23 +55,34 @@ header{
 		}
 
 		.actions{
-			width: 80%;
+			width: 85%;
 			flex-flow: row wrap;
 			justify-content: flex-start;
 			display: flex;
 
 			.search {
-				width: 50%;
+				width: 100%;
 				flex-flow: row wrap;
 				justify-content: flex-start;
 				display: flex;
 
 				label{
-					width: 15%;
+					width: 8%;
+
+					&:after{
+						content: "|";
+						margin: 0 0 0 .5em;
+						font-weight: 300;
+					}
 				}
 
 				input[type="text"]{
-					width: 75%;
+					width: 80%;
+
+					&:-webkit-autofill {
+						-webkit-box-shadow: 0 0 0px 1000px @main-header-color inset;
+						color: white;
+					}
 				}
 			}
 		}
@@ -117,5 +143,43 @@ header{
 		}
 
 	}
+}
 
+.sub-menu{
+	font-size: 95%;
+
+	.main-actions{
+		flex-flow: row wrap;
+		justify-content: flex-start;
+		display: flex;
+		justify-content: center;
+		margin: .8em 0;
+
+		li{
+			margin-right: .2em;
+
+		}
+	}
+}
+
+
+.grid{
+	.item{
+		font-size: 110%;
+		margin: 1.5em 0;
+
+		h3{
+			font-size: 1.4em;
+			line-height: 1.2em;
+		}
+
+		h3, p{
+			display: inline;
+		}
+
+		a.who{
+			background: transparent;
+			padding: 0;
+		}
+	}
 }
