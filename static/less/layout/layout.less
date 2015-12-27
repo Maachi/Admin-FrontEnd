@@ -54,8 +54,40 @@ header{
 			line-height: 4em;
 		}
 
+		.user{
+			width: 25%;
+			flex-flow: row wrap;
+			justify-content: flex-end;
+			display: flex;
+
+			.user-title{
+				color: #fff;
+				line-height: 4em;
+				margin: 0;
+			}
+
+			.avatar{
+				background-color: #21a5ff;
+				background-size: contain;
+				width: 2.5em;
+				height: 2.5em;
+				border-radius: 3em;
+				position: relative;
+				overflow: hidden;
+				display: inline-block;
+				margin:.8em .8em 0 0;
+				text-align: center;
+				line-height: 2.5em;
+				color: #fff;
+
+				span{
+					font-size: 1.8em;
+				}
+			}
+		}
+
 		.actions{
-			width: 85%;
+			width: 60%;
 			flex-flow: row wrap;
 			justify-content: flex-start;
 			display: flex;
@@ -67,13 +99,12 @@ header{
 				display: flex;
 
 				label{
-					width: 8%;
-
-					&:after{
-						content: "|";
-						margin: 0 0 0 .5em;
-						font-weight: 300;
-					}
+					width: 12%;
+					position: relative;
+					overflow: hidden;
+					font-size: 1.5em;
+					line-height: 2.7em;
+					text-align: center;
 				}
 
 				input[type="text"]{
@@ -162,15 +193,50 @@ header{
 	}
 }
 
+.button{
+	background: #21a5ff;
+	color: #fff;
+	border-radius: .5em;
+}
+
 
 .grid{
+	background: #fff;
+	padding: 2em;
+	border-radius: .5em;
+	margin: 1.2em 2.5em;
+
+	a{
+		padding: 0;
+	}
+
 	.item{
 		font-size: 110%;
-		margin: 1.5em 0;
+		margin: 0 0 2.5em 0;
+		padding-bottom: 1em;
+		border-bottom: 1px solid @border-color;
+
+		&:last-child{
+			margin: 0;
+			border-bottom: none;
+		}
+
+		.button{
+			&.small{
+				font-size: .6em;
+				padding: .3em;
+			}
+		}
 
 		h3{
 			font-size: 1.4em;
 			line-height: 1.2em;
+			color: #000;
+			font-weight: 500;
+		}
+
+		p{
+			color: #303030;
 		}
 
 		h3, p{
@@ -180,6 +246,10 @@ header{
 		a.who{
 			background: transparent;
 			padding: 0;
+		}
+		.when{
+			margin-bottom: .5em;
+			color: #b5b5b5;
 		}
 	}
 }

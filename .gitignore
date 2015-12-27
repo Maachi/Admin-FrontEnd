@@ -15,6 +15,7 @@ bower_components/
 .lvimrc
 libpeerconnection.log
 npm-debug.log
+/static/fonts/
 /tmp/
 /scripts/bower/bower-*
 public/*
