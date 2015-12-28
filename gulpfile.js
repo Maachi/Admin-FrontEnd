@@ -3,11 +3,21 @@ var gulp = require('gulp'),
 	less = require('gulp-less'),
 	path = require('path'),
 	minifyCSS = require('gulp-minify-css'),
-	autoprefixer = require('gulp-autoprefixer');
+	autoprefixer = require('gulp-autoprefixer'),
+	concat = require('gulp-concat'),
+	usemin = require('gulp-usemin');
 
 
 gulp.task('default', ['less', 'webserver', 'watch']);
 
+gulp.task('javascript', function() {
+	//Define some task here
+});
+
+
+gulp.task('usemin', function() {
+	return gulp.src('./*.html')
+});
 
 gulp.task('less', function () {
 	return gulp.src('./static/less/main.less')
@@ -21,6 +31,7 @@ gulp.task('less', function () {
 
 gulp.task('watch', function() {
 	gulp.watch('./static/less/**/*.less', ['less']);
+	gulp.watch('./static/javascript/app/**/*.js', ['javascript']);
 });
 
 
