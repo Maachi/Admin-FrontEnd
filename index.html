@@ -12,6 +12,17 @@
 	</head>
 	<body>
 		<div class="app">
+			<div class="pop-over">
+				<ul>
+					<li><a href="">Detalles de presentación</a></li>
+					<li><a href="">Ver detalle</a></li>
+					<li><a href="">Ver código fuente de la página</a></li>
+				</ul>
+				<ul>
+					<li><a href="">Configuración</a></li>
+					<li><a href="">Salir</a></li>
+				</ul>
+			</div>
 			<header class="application-header">
 				<div class="application-wrapper">
 					<h1><a href=".">gesti&oacute;n</a></h1>
@@ -22,7 +33,7 @@
 						</li>
 					</ul>
 					<div class="user">
-						<div class="avatar"><span>S</span></div>
+						<a href="" class="avatar"><span>S</span></a>
 						<p class="user-title">Sebastián <strong>Romero</strong></p>
 					</div>
 				</div>
@@ -61,15 +72,26 @@
 						</div>
 						<div class="item">
 							<div class="when">
-						        <a class="who" herf="">Diana Catalina</a> - <time datetime="2015-12-26T16:19:08Z" data-local="time-or-date" title="December 26, 2015 at 11:19am COT">11:19am</time>
+								<a class="avatar" href=""><span>D</span></a> Diana Catalina — <time datetime="2015-12-26T16:19:08Z" data-local="time-or-date" title="December 26, 2015 at 11:19am COT">11:19am</time>
 							</div>
-							<h3>Vivamus vel mi nec nulla luctus malesuada vel at nibh us vel.</h3>
+							<h3>Vel mi nec nulla luctus malesuada vel at nibh vivamus vel mi nec nulla luctus malesuada vel at nibh us vel.</h3>
 							<p> — Donec sit amet pretium tellus, ac sodales mauris. Cras pulvinar at risus eget tempor. In hendrerit congue vehicula. Nam et metus vulputate, venenatis nisl id, sodales felis.</p>
+							<ul class="processes">
+								<li class="last-document">
+									<span class="icon pe-is-a-folder-o-v"></span>
+									<div class="information">
+										<h4><a href="">Gestión presentadas</a></h4>
+										<p>Donec sit amet pretium tellus, ac sodales mauris. Cras pulvinar at risus eget tempor.</p>
+									</div>
+								</li>
+								<li><a class="view-more" href="">Más gestión...</a></li>
+							</ul>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
+		<script src="/bower_components/angular/angular.min.js"></script>
 		<script src="static/javascript/main.js"></script>
 		<script>
 			(function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
