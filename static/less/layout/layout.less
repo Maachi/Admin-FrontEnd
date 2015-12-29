@@ -356,3 +356,44 @@ header{
 		}
 	}
 }
+
+.column{
+	position: absolute;
+	top:0;
+
+	&.right{
+		right: 0;
+	}
+
+	&.left{
+		text-align: right;
+	}
+
+	a{
+		padding: 0;
+
+		&:hover{
+			background: transparent;
+			text-decoration: underline;
+		}
+	}
+
+	.lateral-menu{
+		.whos-logged{
+			height: 3em;
+			flex-flow: row wrap;
+			justify-content: flex-end;
+			display: flex;
+
+			.avatar{
+				margin-top: 1em;
+			}
+
+			a{
+				font-weight: 300;
+				font-size: 1.2em;
+				line-height: 3.2em;
+			}
+		}
+	}
+}

@@ -49,7 +49,7 @@
 							<li><a href=".">Documentos</a></li>
 						</ul>
 					</div>
-					<div class="grid">
+					<div id="application-container" class="grid">
 						<div class="item">
 							<div class="when">
 								<a class="avatar" href=""><span>D</span></a> Diana Catalina — <time datetime="2015-12-26T16:19:08Z" data-local="time-or-date" title="December 26, 2015 at 11:19am COT">11:19am</time>
@@ -90,12 +90,25 @@
 					</div>
 				</div>
 			</div>
+			<div id="left-menu" class="column left">
+				<ul class="lateral-menu">
+					<li class="whos-logged"><div class="avatar" href=""><span>S</span></div><a href="">Sebastián Romero</a></li>
+					<li><a href="">Mis datos</a></li>
+					<li><a href="">Asistente judicial</a></li>
+					<li><a href="">Mis procesos</a></li>
+					<li><a href="">Enviar notificación</a></li>
+					<li><a href="">Salida segura</a></li>
+				</ul>
+			</div>
+			<div id="right-menu" class="column right">
+			</div>
 		</div>
 		<!-- build:js static/javascript/vendor.js -->
 		<script src="/bower_components/jquery/dist/jquery.min.js"></script>
 		<!-- endbuild -->
 
 		<!-- build:js static/javascript/main.js -->
+		<script src="/static/javascript/components/layout.js"></script>
 		<script src="/static/javascript/gestion.js"></script>
 		<!-- endbuild -->
 		<script>
