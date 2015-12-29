@@ -12,7 +12,7 @@
 	</head>
 	<body>
 		<div class="app">
-			<div class="pop-over">
+			<div id="menu-profile-popover" class="pop-over">
 				<ul>
 					<li><a href="">Detalles de presentación</a></li>
 					<li><a href="">Ver detalle</a></li>
@@ -33,7 +33,7 @@
 						</li>
 					</ul>
 					<div class="user">
-						<a href="" class="avatar"><span>S</span></a>
+						<a id="view-profile-options" href="" class="avatar"><span>S</span></a>
 						<p class="user-title">Sebastián <strong>Romero</strong></p>
 					</div>
 				</div>
@@ -87,12 +87,22 @@
 								<li><a class="view-more" href="">Más gestión...</a></li>
 							</ul>
 						</div>
+						<div class="item">
+							<div class="when">
+								<a class="avatar" href=""><span>D</span></a> Diana Catalina — <time datetime="2015-12-26T16:19:08Z" data-local="time-or-date" title="December 26, 2015 at 11:19am COT">11:19am</time>
+							</div>
+							<h3>Vel mi nec nulla luctus malesuada vel at nibh vivamus vel mi nec nulla luctus malesuada vel at nibh us vel.</h3>
+							<p> — Donec sit amet pretium tellus, ac sodales mauris. Cras pulvinar at risus eget tempor. In hendrerit congue vehicula. Nam et metus vulputate, venenatis nisl id, sodales felis.</p>
+							<ul class="processes">
+								<li><a class="view-more" href="">Añadir gestión...</a></li>
+							</ul>
+						</div>
 					</div>
 				</div>
 			</div>
 			<div id="left-menu" class="column left">
 				<ul class="lateral-menu">
-					<li class="whos-logged"><div class="avatar" href=""><span>S</span></div><a href="">Sebastián Romero</a></li>
+					<li class="whos-logged"><div class="avatar" href=""><span>R</span></div><a href="">Rojas Novoa - Asesorías Legales</a></li>
 					<li><a href="">Mis datos</a></li>
 					<li><a href="">Asistente judicial</a></li>
 					<li><a href="">Mis procesos</a></li>
@@ -101,6 +111,22 @@
 				</ul>
 			</div>
 			<div id="right-menu" class="column right">
+				<ul class="lateral-menu">
+					<li><h4>Últimos archivos</h4></li>
+					<li><a href=""><span class="pe-mini-next-1"></span>Factura de venta Biko sas</a></li>
+					<li><a href="">Contratos de traducción Maachi sas</a></li>
+					<li><a href="">Asistencia contrato validación</a></li>
+					<li><a href=""><span class="pe-mini-surround"></span>Audio prueba caso tejas</a></li>
+					<li><a href="">Factura de salida</a></li>
+					<li><a href="">Liquidación de servicios</a></li>
+				</ul>
+				<ul class="lateral-menu">
+					<li><h4>Gestión de usuarios</h4></li>
+					<li><a href=""><span class="pe-mini-user-male"></span>Sebastián Romero</a></li>
+					<li><a href=""><span class="pe-mini-user-male"></span>Diana Catalina</a></li>
+					<li><a href=""><span class="pe-mini-user-male"></span>Ronald</a></li>
+					<li><a href=""><span class="pe-mini-user-male"></span>Nohemi Novoa</a></li>
+				</ul>
 			</div>
 		</div>
 		<!-- build:js static/javascript/vendor.js -->
@@ -109,6 +135,7 @@
 
 		<!-- build:js static/javascript/main.js -->
 		<script src="/static/javascript/components/layout.js"></script>
+		<script src="/static/javascript/components/header.js"></script>
 		<script src="/static/javascript/gestion.js"></script>
 		<!-- endbuild -->
 		<script>

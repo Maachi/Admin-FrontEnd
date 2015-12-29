@@ -319,6 +319,7 @@ header{
 }
 
 .pop-over{
+	display: none;
 	position: absolute;
 	background: #f0f0f0;
 	border-radius: .35em;
@@ -363,10 +364,21 @@ header{
 
 	&.right{
 		right: 0;
+		li{
+			flex-flow: row wrap;
+			justify-content: flex-start;
+			display: flex;
+		}
 	}
 
 	&.left{
 		text-align: right;
+
+		li{
+			flex-flow: row wrap;
+			justify-content: flex-end;
+			display: flex;
+		}
 	}
 
 	a{
@@ -379,6 +391,34 @@ header{
 	}
 
 	.lateral-menu{
+		padding: 1em 0;
+		border-top: 1px solid #ccc;
+		border-bottom: 1px solid #fff;
+
+		&:first-child{
+			padding-top:0;
+			border-top: none;
+		}
+
+		&:last-child{
+			border-bottom: none;
+		}
+
+		a{
+			display: block;
+			width: 70%;
+			white-space: nowrap;
+			overflow: hidden;
+			text-overflow: ellipsis;
+
+			span{
+				margin-right: .3em;
+			}
+		}
+		h4{
+			font-size: 1.2em;
+			margin: .5em 0;
+		}
 		.whos-logged{
 			height: 3em;
 			flex-flow: row wrap;
@@ -387,6 +427,7 @@ header{
 
 			.avatar{
 				margin-top: 1em;
+				margin-right: 0;
 			}
 
 			a{

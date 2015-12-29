@@ -7,6 +7,17 @@
 			applicationContainer = $('#application-container');
 
 
+
+		function onLayOutResize(){
+			draw();
+		}
+
+
+		function addEvents(){
+			$(window).on('resize', onLayOutResize);
+		}
+
+
 		function draw(){
 			var applicationWidth = applicationContainer.outerWidth(true),
 				windowWidth = $(window).width(),
@@ -21,6 +32,7 @@
 		/** @constructor */
 		(function(){
 			draw();
+			addEvents();
 		})();
 
 		return {
