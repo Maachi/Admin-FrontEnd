@@ -3,7 +3,8 @@
 
 	scope.Navigation = function(){
 
-		var links = $('a[href*=\'/\']'),
+		var selector = 'a[href*=\'.html\']',
+			links = $(selector),
 			appContainer = $('.app'),
 			mainContainer = $('#application-container');
 
@@ -30,8 +31,7 @@
 					mainContainer.empty();
 					mainContainer.html(response);
 					setTimeout(function(){
-						console.log(mainContainer.find('a[href*=\'/\']').size());
-						mainContainer.find('a[href*=\'/\']').on('click', linkClicked);
+						mainContainer.find(selector).on('click', linkClicked);
 					}, 200);
 					history.pushState(null, null, url);
 				}
