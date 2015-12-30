@@ -1,10 +1,10 @@
-;(function($){
+;(function($, scope){
 	'use strict';
 
-	var Gestion = function(){
+	scope.Gestion = function(){
 		return {
 
 		};
 	}();
 
-}(jQuery));
+}(jQuery, window));

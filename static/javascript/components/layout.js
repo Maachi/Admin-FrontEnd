@@ -31,6 +31,9 @@
 
 		/** @constructor */
 		(function(){
+			setTimeout(function(){
+				$(document.body).removeClass('loading');
+			}, 200);
 			draw();
 			addEvents();
 		})();
