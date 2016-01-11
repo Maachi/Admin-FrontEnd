@@ -517,10 +517,77 @@ header{
 	}
 }
 
+
+.badge{
+	border-radius: .4em;
+	padding: .3em;
+	text-transform: uppercase;
+	font-size: .8em;
+	font-weight: bold;
+
+	&.success {
+		background: @success-background-color;
+		color: @rollover-link-color;
+
+	}
+
+	&.free{
+		background: @free-background-color;
+		color: @rollover-link-color;
+	}
+}
+
+
 table{
 	width: 100%;
+	border-collapse: collapse;
+
+	a{
+		color: @services-font-color;
+
+		&:hover {
+			text-decoration: underline;
+			color: @services-font-color;
+		}
+	}
+
+	thead{
+		display: none;
+	}
 
 	th{
 		text-align: left;
+		font-weight: 300;
+		font-size: 1.2em;
+	}
+
+	tbody{
+
+		tr{
+			border-bottom: 1px solid @border-color;
+
+			td{
+				padding: .8em 0;
+
+				&.actions-column{
+					text-align: right;
+				}
+
+				.button{
+					border-radius: .4em;
+					background: @view-more-color;
+					color: @rollover-link-color;
+					border-radius: .4em;
+					padding: .3em;
+					text-transform: uppercase;
+					font-size: .8em;
+					font-weight: bold;
+
+					&:hover{
+						text-decoration: none;
+					}
+				}
+			}
+		}
 	}
 }
