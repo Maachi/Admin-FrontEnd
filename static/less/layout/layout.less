@@ -2,6 +2,84 @@
 	width: 60em;
 	min-width: 20em;
 	margin: 0 auto;
+
+	.form-content{
+		h2{
+			font-size: 2.6em;
+			font-weight: 300;
+			margin-bottom: .5em;
+		}
+
+		p{
+			line-height: 1.4em;
+			color: @p-description-color;
+			font-size: 1.1em;
+		}
+	}
+
+
+	fieldset{
+		margin: .5em 0;
+
+		legend{
+			font-size: 1.6em;
+			margin: 1em 0;
+		}
+	}
+
+
+	.field{
+		position: relative;
+		padding: .2em 0;
+	}
+
+	input[type="text"],
+	input[type="email"],
+	input[type="password"],
+	textarea {
+		border-bottom: 1px solid @border-color;
+		padding: .4em 0 .4em 0;
+		font-size: 1.2em;
+	}
+
+	select{
+		border: 1px solid @border-color;
+		height: 2em;
+		padding: .4em 0 .4em 0;
+		margin: .4em 0;
+		font-size: 1.2em;
+		font-weight: 300;
+		width: 100%;
+
+		&:focus{
+			outline: none;
+		}
+	}
+
+	textarea{
+		resize:none;
+		height: 6em;
+	}
+
+	button{
+		margin: 1em 0;
+		font-size: 1.1em;
+		padding: .5em 1em;
+		background: @button-color;
+		color: @button-font-color;
+		width: auto;
+		display: inline-block;
+		border-radius: .2em;
+
+		&[type="reset"]{
+			background: transparent;
+			color: @button-color;
+		}
+	}
+
+	.buttons-wrapper{
+		text-align: right;
+	}
 }
 
 header{
@@ -392,8 +470,8 @@ header{
 
 	.lateral-menu{
 		padding: 1em 0;
-		border-top: 1px solid #ccc;
-		border-bottom: 1px solid #fff;
+		/*border-top: 1px solid #ccc;
+		border-bottom: 1px solid #fff;*/
 
 		&:first-child{
 			padding-top:0;

@@ -15,6 +15,20 @@
 
 		function addEvents(){
 			$(window).on('resize', onLayOutResize);
+			$(window).on('scroll', onPageScroll)
+		}
+
+
+		function onPageScroll(){
+			if($(this).scrollTop() >= applicationContainer.offset().top){
+				columns.css({
+					'top' : $(this).scrollTop()
+				});
+			} else {
+				columns.css({
+					'top' : applicationContainer.offset().top
+				});
+			}
 		}
 
 

@@ -40,7 +40,7 @@
 
 
 		function onPopState(event){
-			console.log('popstate...', location.href);
+			//console.log('popstate...', location.href);
 		}
 
 

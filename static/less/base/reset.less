@@ -26,6 +26,10 @@ h3{
 	font-size: 1.8em;
 }
 
+em{
+	font-style: normal;
+}
+
 a{
 	text-decoration: none;
 	color: @inside-link-color;
@@ -39,6 +43,10 @@ a{
 		border-radius: .3em;
 		background: @rollover-link-color;
 		color: @rollover-text-link-color;
+	}
+
+	&:focus{
+		outline: none;
 	}
 }
 
