@@ -31,11 +31,17 @@
 					mainContainer.empty();
 					mainContainer.html(response);
 					setTimeout(function(){
-						mainContainer.find(selector).on('click', linkClicked);
+						load();
 					}, 200);
 					history.pushState(null, null, url);
 				}
 			});
+		}
+
+
+		function load(){
+			mainContainer.find(selector).on('click', linkClicked);
+			scope.Forms.reload();
 		}
 
 
@@ -55,7 +61,7 @@
 		})();
 
 		return {
-
+			'reload':load
 		};
 	}();
 

@@ -31,6 +31,20 @@
 	.field{
 		position: relative;
 		padding: .2em 0;
+
+		&.signature{
+
+			.frame{
+				border: 1em solid @main-background-color;
+				margin: .5em 0;
+			}
+
+			canvas{
+				width: 100%;
+				height: 8em;
+				display: block;
+			}
+		}
 	}
 
 	input[type="text"],

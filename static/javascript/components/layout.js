@@ -32,6 +32,11 @@
 		}
 
 
+		function load(){
+			
+		}
+
+
 		function draw(){
 			var applicationWidth = applicationContainer.outerWidth(true),
 				windowWidth = $(window).width(),
@@ -53,7 +58,7 @@
 		})();
 
 		return {
-
+			'reload' : load
 		};
 	}();
 
