@@ -41,11 +41,13 @@
 			var applicationWidth = applicationContainer.outerWidth(true),
 				windowWidth = $(window).width(),
 				columnWidth = (windowWidth - applicationWidth)/2;
-			columns.css({
-				'top' : applicationContainer.offset().top,
-				'width' : columnWidth,
-				'height': '100%'
-			});
+			if (applicationContainer.size()>0){
+				columns.css({
+					'top' : applicationContainer.offset().top,
+					'width' : columnWidth,
+					'height': '100%'
+				});
+			}
 		}
 
 		/** @constructor */
