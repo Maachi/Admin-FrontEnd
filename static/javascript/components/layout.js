@@ -20,14 +20,16 @@
 
 
 		function onPageScroll(){
-			if($(this).scrollTop() >= applicationContainer.offset().top){
-				columns.css({
-					'top' : $(this).scrollTop()
-				});
-			} else {
-				columns.css({
-					'top' : applicationContainer.offset().top
-				});
+			if (applicationContainer.size()>0){
+				if($(this).scrollTop() >= applicationContainer.offset().top){
+					columns.css({
+						'top' : $(this).scrollTop()
+					});
+				} else {
+					columns.css({
+						'top' : applicationContainer.offset().top
+					});
+				}
 			}
 		}
 

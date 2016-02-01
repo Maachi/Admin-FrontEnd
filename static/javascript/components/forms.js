@@ -7,8 +7,11 @@
 			signaturesControls = [];
 
 		function addEvents(){
-			$('form').on('submit', formSubmitAction);
-			addSignatureEvents();
+			var form = $('form');
+			if (!form.data('noajax')){
+				$('form').on('submit', formSubmitAction);
+				addSignatureEvents();
+			}
 		}
 
 
