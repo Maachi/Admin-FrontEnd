@@ -45,6 +45,27 @@
 				display: block;
 			}
 		}
+
+		&.multiple{
+			display: flex;
+
+
+			input[type="text"],
+			input[type="email"],
+			input[type="password"],
+			textarea,
+			select{
+				width: 40%;
+				margin-right: 2%;
+			}
+
+			button,
+			.button{
+				height: 1.5em;
+				line-height: 1.5em;
+				margin-top: 0.75em;
+			}
+		}
 	}
 
 	input[type="text"],
@@ -303,6 +324,16 @@ header{
 	background: #21a5ff;
 	color: #fff;
 	border-radius: .5em;
+
+	&.simple {
+		padding: .3em;
+
+		&:hover {
+			background: #21a5ff;
+			border-radius: .5em;
+			color: #fff;
+		}
+	}
 }
 
 

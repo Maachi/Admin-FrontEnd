@@ -7,4 +7,4 @@ Gestión es un proyecto que te da un punto de partida para hacer un administrado
 
 `#: npm install`
 `#: bower install`
-`#: gulp`
+`#: gulp
