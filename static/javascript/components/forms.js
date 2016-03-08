@@ -12,12 +12,20 @@
 				$('form').on('submit', formSubmitAction);
 				addSignatureEvents();
 				addPhoneFieldEvents();
+				addActionFieldMultiple();
 			}
 		}
 
 
+		function addActionFieldMultiple(){
+			$('#application-container .button.add-button').on('click', function(event){
+				event.preventDefault();
+				$(this).parent().parent().		($(this).parent().clone());
+			});
+		}
+
+
 		function addPhoneFieldEvents(){
-			console.log($('#application-container input.phone-field'));
 			$('#application-container input.phone-field').keydown(function (e) {
 				var key = e.charCode || e.keyCode || 0,
 					$phone = $(this);
@@ -111,6 +119,7 @@
 			mainContainer.find('form').on('submit', formSubmitAction);
 			addSignatureEvents(mainContainer);
 			addPhoneFieldEvents();
+			addActionFieldMultiple();
 		}
 
 		/** @constructor */
