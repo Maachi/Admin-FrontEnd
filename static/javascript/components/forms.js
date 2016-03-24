@@ -11,22 +11,39 @@
 			if (!form.data('noajax')){
 				$('form').on('submit', formSubmitAction);
 				addSignatureEvents();
-				addPhoneFieldEvents();
+				addPhoneFieldEvents($('#application-container'));
 				addActionFieldMultiple();
 			}
 		}
 
 
-		function addActionFieldMultiple(){
-			$('#application-container .button.add-button').on('click', function(event){
-				event.preventDefault();
-				$(this).parent().parent().		($(this).parent().clone());
-			});
+		function addEventsToClonedMultipleElement(cloned){
+			cloned.find('.button.add-button').on('click', clickMultipleEventButton);
 		}
 
 
-		function addPhoneFieldEvents(){
-			$('#application-container input.phone-field').keydown(function (e) {
+		function clickMultipleEventButton(event){
+			var element = $(this).parent().clone();
+			event.preventDefault();
+			addEventsToClonedMultipleElement(element);
+			addPhoneFieldEvents(element);
+			element.find('input').val('');
+			$(this).parent().after(element);
+		}
+
+
+		function addActionFieldMultiple(){
+			$('#application-container .button.add-button').on('click', clickMultipleEventButton);
+		}
+
+
+		function phoneEventFieldMultiple(e){
+
+		}
+
+
+		function addPhoneFieldEvents(parent){
+			parent.find('input.phone-field').keydown(function (e) {
 				var key = e.charCode || e.keyCode || 0,
 					$phone = $(this);
 
@@ -118,7 +135,7 @@
 		function load(){
 			mainContainer.find('form').on('submit', formSubmitAction);
 			addSignatureEvents(mainContainer);
-			addPhoneFieldEvents();
+			addPhoneFieldEvents($('#application-container'));
 			addActionFieldMultiple();
 		}
 

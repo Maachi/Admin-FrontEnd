@@ -53,9 +53,10 @@
 			input[type="text"],
 			input[type="email"],
 			input[type="password"],
+			input[type="number"],
 			textarea,
 			select{
-				width: 40%;
+				width: 35%;
 				margin-right: 2%;
 			}
 
@@ -644,6 +645,33 @@ table{
 					}
 				}
 			}
+		}
+	}
+}
+
+
+.duplicable-cell{
+
+	select {
+		width: 20%;
+		margin-right: 1em;
+	}
+
+	input[type="text"],
+	input[type="number"],
+	input[type="email"],
+	input[type="password"]{
+		width: 50%;
+		display: inline-block;
+	}
+
+	.button{
+		padding: .5em .5em;
+		margin-left: 1em;
+
+		&:hover {
+			background: #21a5ff;
+			border-radius: .5em;
 		}
 	}
 }
