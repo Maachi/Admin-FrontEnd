@@ -50,12 +50,19 @@
 						</ul>
 					</div>
 					<div id="application-container" class="grid">
+						<header class="top-grid">
+							<ul>
+								<li><a class="button" href="/static/mocks/process.html">Crear un nuevo proceso</a></li>
+							</ul>
+						</header>
 						<div class="item">
 							<div class="when">
 								<a class="avatar" href=""><span>D</span></a> Diana Catalina — <time datetime="2015-12-26T16:19:08Z" data-local="time-or-date" title="December 26, 2015 at 11:19am COT">11:19am</time>
 							</div>
 							<h3>Vivamus vel mi nec nulla luctus malesuada vel at nibh us vel.</h3>
-							<p> — Donec sit amet pretium tellus, ac sodales mauris. Cras pulvinar at risus eget tempor. In hendrerit congue vehicula. Nam et metus vulputate, venenatis nisl id, sodales felis.</p>
+							<div class="editable-field">
+								<p> — Donec sit amet pretium tellus, ac sodales mauris. Cras pulvinar at risus eget tempor. In hendrerit congue vehicula. Nam et metus vulputate, venenatis nisl id, sodales felis.</p>
+							</div>
 							<ul class="processes">
 								<li class="last-document">
 									<span class="icon pe-is-a-zip"></span>
@@ -182,6 +189,8 @@
 		<!-- endbuild -->
 
 		<!-- build:js static/javascript/main.js -->
+		<script src="/static/javascript/lib/editor/editor.js"></script>
+
 		<script src="/static/javascript/components/forms.js"></script>
 		<script src="/static/javascript/components/layout.js"></script>
 		<script src="/static/javascript/components/header.js"></script>

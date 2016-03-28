@@ -223,6 +223,52 @@ header{
 	}
 }
 
+.editable-field{
+	border-radius: .2em;
+	
+	&:focus{
+		outline: none;
+		background: #fff;
+		padding: 1em 0;
+		//box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.4);
+	}
+}
+
+
+h2, h3, h4, h5{
+	&.editable-field {
+		&:focus{
+			padding: 0;
+		}
+	}
+}
+
+
+.top-grid{
+	margin-bottom: 1em;
+
+	ul{
+		display: flex;
+		flex-wrap: nowrap;
+		flex-direction: row;
+		justify-content: flex-end;
+		align-content: stretch;
+		align-items: flex-start;
+	}
+
+	.button{
+		margin-left: .5em;
+		padding: .2em .5em;
+		border-radius: .3em;
+
+		&:hover {
+			background: #21a5ff;
+			border-radius: .3em;
+			color: #fff;
+		}
+	}
+}
+
 
 .avatar{
 	background-color: #21a5ff;

@@ -13,6 +13,7 @@
 				addSignatureEvents();
 				addPhoneFieldEvents($('#application-container'));
 				addActionFieldMultiple();
+				addEditableFieldsActions();
 			}
 		}
 
@@ -128,6 +129,12 @@
 
 		}
 
+		function addEditableFieldsActions(){
+			$('.editable-field').each(function(){
+				var editor = new Editor(this);
+			});
+		}
+
 
 		function draw(){
 		}
@@ -137,6 +144,7 @@
 			addSignatureEvents(mainContainer);
 			addPhoneFieldEvents($('#application-container'));
 			addActionFieldMultiple();
+			addEditableFieldsActions();
 		}
 
 		/** @constructor */
