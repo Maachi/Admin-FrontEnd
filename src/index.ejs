@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script src="https://use.typekit.net/spg6xgx.js"></script>
+    <script>try{Typekit.load({ async: true });}catch(e){}</script>
+    <% if (htmlWebpackPlugin.options.trackJSToken) { %>
+    <script>window._trackJs = {token: '<%= htmlWebpackPlugin.options.trackJSToken %>'};</script>
+    <script src="https://d2zah9y47r7bi2.cloudfront.net/releases/current/tracker.js"></script>
+    <% } %>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Gestion</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+  <body>
+    <div id="gestion-app"></div>
+  </body>
+</html>

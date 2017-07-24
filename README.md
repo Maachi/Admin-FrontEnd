@@ -1,10 +1,15 @@
-# Gestion
-![alt tag](https://raw.githubusercontent.com/Maachi/Admin-FrontEnd/master/ss-gestion.jpg)
+# Gestion 
 
-Gestión es un proyecto que te da un punto de partida para hacer un administrador personalizado. Inicialmente desarrollado para cubrir las necesidades para Gestión Legal.
+## Installation
 
-## Empezar
+The following dependencies are needed to run this environment:
 
-`#: npm install`
-`#: bower install`
-`#: gulp
+1. Install all dependencies `npm install`
+2. Start the project `npm start -s`
+3. Do your changes
+
+## Deploy
+
+1. Just run `npm run build`
+
+
