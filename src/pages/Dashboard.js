@@ -1,10 +1,11 @@
 import React from 'react';
 import Header from '../components/Header';
+import LastActivities from '../components/LastActivities';
+import FlexibleNavigation from '../components/FlexibleNavigation';
 
 class Dashboard extends React.Component {
-  
 
-  render() {
+  render(){
     return (
         <div className="app">
           <div className="pop-over">
@@ -20,7 +21,7 @@ class Dashboard extends React.Component {
           </div>
           <Header />
             <div className="application-canvas">
-                <div className="application-wrapper">
+                <div id="application-content" className="application-wrapper">
                     <div className="sub-menu">
                         <ul className="main-actions">
                             <li><a href=".">Dashboard</a></li>
@@ -118,34 +119,8 @@ class Dashboard extends React.Component {
                     </div>
                 </div>
             </div>
-            <div id="left-menu" className="column left">
-                <ul className="lateral-menu">
-                    <li className="whos-logged"><a href="/static/mocks/forms.html"><div className="avatar"><span>R</span></div>Rojas Novoa - Asesorías Legales</a></li>
-                    <li><a href="">Mis datos</a></li>
-                    <li><a href="">Asistente judicial</a></li>
-                    <li><a href="">Mis procesos</a></li>
-                    <li><a href="">Enviar notificación</a></li>
-                    <li><a href="">Salida segura</a></li>
-                </ul>
-            </div>
-            <div id="right-menu" className="column right">
-                <ul className="lateral-menu">
-                    <li><h4>Últimos archivos</h4></li>
-                    <li><a href=""><span className="pe-mini-next-1" />Factura de venta Biko sas</a></li>
-                    <li><a href="">Contratos de traducción Maachi sas</a></li>
-                    <li><a href="">Asistencia contrato validación</a></li>
-                    <li><a href=""><span className="pe-mini-surround" />Audio prueba caso tejas</a></li>
-                    <li><a href="">Factura de salida</a></li>
-                    <li><a href="">Liquidación de servicios</a></li>
-                </ul>
-                <ul className="lateral-menu">
-                    <li><h4>Gestión de usuarios</h4></li>
-                    <li><a href=""><span className="pe-mini-user-male" />Sebastián Romero</a></li>
-                    <li><a href=""><span className="pe-mini-user-male" />Diana Catalina</a></li>
-                    <li><a href=""><span className="pe-mini-user-male" />Ronald</a></li>
-                    <li><a href=""><span className="pe-mini-user-male" />Nohemi Novoa</a></li>
-                </ul>
-            </div>
+            <LastActivities />
+            <FlexibleNavigation />
         </div>);
   }
 }
