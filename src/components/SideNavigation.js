@@ -10,15 +10,6 @@ class SideNavigation extends React.Component {
     };
   }
 
-  adjustSideMenu(){
-    let widthSide = ((document.body.clientWidth - document.getElementById('application-container').clientWidth)/2)-20;
-    let topSide = document.getElementById('application-container').offsetTop
-    this.setState({
-      width: widthSide,
-      top:topSide
-    });
-  }
-
   componentDidMount(){
     setTimeout(function(){ 
       this.adjustSideMenu();
@@ -28,6 +19,15 @@ class SideNavigation extends React.Component {
 
   componentWillUnmount(){
     window.removeEventListener('resize', this.adjustSideMenu.bind(this));
+  }
+
+  adjustSideMenu(){
+    let widthSide = ((document.body.clientWidth - document.getElementById('application-container').clientWidth)/2)-20;
+    let topSide = document.getElementById('application-container').offsetTop
+    this.setState({
+      width: widthSide,
+      top:topSide
+    });
   }
 }
 

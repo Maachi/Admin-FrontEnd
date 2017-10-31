@@ -2,7 +2,6 @@ import React from 'react';
 import SideNavigation from './SideNavigation';
 
 class LastActivities extends SideNavigation {
-
   render() {
     return (
       <div className="column left" ref="side" style={{
